@@ -1,0 +1,70 @@
+1. public class Main {
+    public static void main(String[] args) {
+        String name = "Ali";
+        int age = 20;
+
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+    }
+}
+2. import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter your age: ");
+        int age = input.nextInt();
+
+        if (age >= 18) {
+            System.out.println("You are 18 or older.");
+        } else {
+            System.out.println("You are under 18.");
+        }
+
+        input.close();
+    }
+}
+3. <?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student App"
+        android:textSize="24sp" />
+
+    <EditText
+        android:id="@+id/nameInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit" />
+
+</LinearLayout>
+4.وقتی کاربر دکمه را لمس می‌کند، کد داخل setOnClickListener() اجرا می‌شود. ابتدا نام از کادر ورودی خوانده شده و سپس با استفاده از Toast یک پیام کوتاه روی صفحه نمایش داده می‌شود.
+
+برای استفاده از این کد، باید آن را داخل متد onCreate() در کلاس Activity قرار دهید و متغیرهای مربوط به EditText و Button را تعریف کنید.
+5.Java: یک زبان برنامه‌نویسی است که برای نوشتن منطق برنامه و اجرای عملیات استفاده می‌شود.
+
+
+
+Android Studio: محیط توسعه رسمی اندروید است که برای نوشتن کد، طراحی رابط کاربری، اجرا و اشکال‌زدایی برنامه‌ها استفاده می‌شود.
+
+
+
+Android SDK: مجموعه‌ای از ابزارها، کتابخانه‌ها و APIهای لازم برای ساخت و آزمایش برنامه‌های اندرویدی است.
+
+
+
+Activity: یکی از اجزای اصلی اندروید است که معمولاً یک صفحه از برنامه را مدیریت می‌کند و با چرخهٔ حیات مشخصی کار می‌کند.

@@ -1,0 +1,160 @@
+تمرین ۱:
+void main() {
+  String name = 'Ali';
+  int age = 20;
+  String major = 'Computer Science';
+
+  print('نام: $name');
+  print('سن: $age');
+  print('رشته تحصیلی: $major');
+}
+تمرین ۲:
+void main() {
+  int score = 15;
+
+  if (score >= 10) {
+    print('قبول');
+  } else {
+    print('مردود');
+  }
+}
+
+
+تمرین ۳:
+void main() {
+  for (int i = 1; i <= 20; i++) {
+    print(i);
+  }
+}
+
+
+تمرین ۴:
+int multiply(int a, int b) {
+  return a * b;
+}
+
+void main() {
+  print(multiply(5, 4));
+}
+
+
+تمرین ۵:
+void main() {
+  List<String> students = [
+    'Ali',
+    'Reza',
+    'Sara',
+    'Mina',
+    'Amir'
+  ];
+
+  for (String student in students) {
+    print(student);
+  }
+}
+
+
+تمرین ۶:
+void main() {
+  Map<String, int> students = {
+    'Ali': 18,
+    'Sara': 20,
+    'Reza': 15,
+  };
+
+  students.forEach((name, score) {
+    print('$name: $score');
+  });
+}
+
+
+تمرین ۷:
+class Book {
+  String title;
+  String author;
+
+  Book(this.title, this.author);
+}
+
+void main() {
+  Book book = Book('The Little Prince', 'Antoine de Saint-Exupery');
+
+  print('عنوان کتاب: ${book.title}');
+  print('نام نویسنده: ${book.author}');
+}
+تمرین ۸:
+کد فایل lib/main.dart:
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        body: Center(
+          child: Text(
+            'برنامه‌نویسی موبایل',
+            style: TextStyle(fontSize: 24),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+
+تمرین ۹:
+کد فایل lib/main.dart:
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatefulWidget {
+  const MyApp({super.key});
+
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  int counter = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: const Text('شمارنده'),
+        ),
+        body: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                'مقدار شمارنده: $counter',
+                style: const TextStyle(fontSize: 24),
+              ),
+              const SizedBox(height: 20),
+              ElevatedButton(
+                onPressed: () {
+                  setState(() {
+                    counter++;
+                  });
+                },
+                child: const Text('افزایش'),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

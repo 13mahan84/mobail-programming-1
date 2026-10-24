@@ -1,0 +1,81 @@
+تمرین ۱:
+fun main() {
+    val name = "Ali"
+    val age = 20
+    val major = "Computer Science"
+
+    println("Name: $name")
+    println("Age: $age")
+    println("Major: $major")
+}
+تمرین ۲:
+fun main() {
+    val score = 15
+
+    if (score >= 10) {
+        println("قبول")
+    } else {
+        println("مردود")
+    }
+}
+تمرین ۳:
+fun main() {
+    for (i in 1..10) {
+        println(i)
+    }
+}
+تمرین ۴:
+fun greet(name: String) {
+    println("سلام $name، خوش آمدی!")
+}
+
+fun main() {
+    greet("Ali")
+}
+تمرین ۵:
+class Book(
+    val title: String,
+    val author: String
+)
+
+fun main() {
+    val book = Book("شازده کوچولو", "آنتوان دوسنت اگزوپری")
+
+    println("عنوان کتاب: ${book.title}")
+    println("نام نویسنده: ${book.author}")
+}
+تمرین ۶:
+
+نوع String برای متغیرهایی استفاده می‌شود که مقدار آن‌ها نباید null باشد؛ اما String? اجازه می‌دهد متغیر مقدار null داشته باشد.
+fun main() {
+    val name: String = "Ali"
+    val lastName: String? = null
+
+    println(name)
+    println(lastName)
+}
+تمرین ۷:
+
+کد فایل activity_main.xml:
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="20dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="برنامه خوشامدگویی"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/myButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="کلیک کنید" />
+
+</LinearLayout>
