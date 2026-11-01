@@ -1,0 +1,141 @@
+1.
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>معرفی دانشجو</title>
+
+    <style>
+        body {
+            background-color: #e8f0fe;
+            font-family: Tahoma;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .profile {
+            background-color: white;
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 400px;
+            margin: auto;
+        }
+
+        h1 {
+            color: #1565c0;
+            font-size: 28px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="profile">
+        <h1>معرفی دانشجو</h1>
+
+        <p>نام: علی احمدی</p>
+        <p>رشته: مهندسی کامپیوتر</p>
+        <p>دانشگاه: دانشگاه تهران</p>
+    </div>
+
+</body>
+</html>
+2.
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>پیام خوشامدگویی</title>
+</head>
+
+<body>
+
+    <h2>برنامه خوشامدگویی</h2>
+
+    <button onclick="showMessage()">
+        نمایش پیام
+    </button>
+
+    <p id="message"></p>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").textContent =
+                "به برنامه خوش آمدید!";
+        }
+    </script>
+
+</body>
+</html>
+3.
+<ion-app>
+
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>مدیریت دانشجویان</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+
+    <ion-item>
+      <ion-input
+        id="studentName"
+        label="نام دانشجو"
+        placeholder="نام را وارد کنید">
+      </ion-input>
+    </ion-item>
+
+    <ion-button expand="block" onclick="addStudent()">
+      ثبت دانشجو
+    </ion-button>
+
+    <ion-list id="studentList">
+    </ion-list>
+
+  </ion-content>
+
+</ion-app>
+
+<script>
+  function addStudent() {
+
+    const input = document.getElementById("studentName");
+    const name = input.value.trim();
+
+    if (name === "") {
+      alert("لطفاً نام دانشجو را وارد کنید");
+      return;
+    }
+
+    const item = document.createElement("ion-item");
+    item.textContent = name;
+
+    document.getElementById("studentList").appendChild(item);
+
+    input.value = "";
+  }
+</script>
+4.
+HTML / CSS / JavaScript
+          |
+          v
+      WebView
+          |
+          v
+   Cordova Runtime
+          |
+          v
+    Native Plugins
+          |
+          v
+       سیستم‌عامل
+          |
+          v
+  دسترسی به امکانات دستگاه
+  (دوربین، GPS، فایل‌ها و ...)
